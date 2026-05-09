@@ -126,6 +126,7 @@ body {
   letter-spacing: 0.1em; /* Lettres bien espacées pour un look moderne */
   transition: all 0.3s ease; /* Animation fluide pour tout changement (couleur, fond...) */
   align-self: flex-start; /* Aligne le bouton à gauche (sinon il prendrait toute la largeur en flex) */
+  cursor: url('/cyber_cursor_black.png'), pointer; /* Applique le curseur personnalisé sur le bouton */
 }
 
 .discover-btn:hover {
@@ -144,4 +145,14 @@ body {
   height: 700px; /* Hauteur de l'image */
   object-fit: contain; /* S'assure que l'image entière est visible sans être rognée */
   display: block; /* Supprime l'espace vide parasite sous l'image */
+}
+
+html, body {
+  /* On définit l'image du curseur. 'auto' est la solution de secours si l'image ne charge pas. */
+  cursor: url('/cyber_cursor.png'), auto;
+}
+
+/* Optionnel : Changer aussi le curseur sur les éléments cliquables (boutons et liens) */
+a, button {
+  cursor: url('/cyber_cursor.png'), pointer;
 }
