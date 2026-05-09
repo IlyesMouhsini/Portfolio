@@ -98,6 +98,7 @@ body {
 }
 
 .subtitle {
+  font-family: 'Screener'; /* Même logique pour la deuxième police */
   color: #00FF00; /* Vert fluo */
   font-size: 1.25rem; /* Taille de police du sous-titre */
   margin-bottom: 1rem; /* Espace sous le sous-titre pour ne pas coller le titre principal */
@@ -111,6 +112,19 @@ body {
   line-height: 0.9; /* Réduit l'espace entre les lignes (interligne serré) */
   text-transform: uppercase; /* Transforme automatiquement tout le texte en majuscules */
   margin: 0 0 2.5rem 0; /* Espace de 2.5rem uniquement en bas du titre */
+  white-space: nowrap; /* Empêche le titre de revenir à la ligne (reste sur une seule ligne) */
+}
+
+.section-title {
+  font-family: 'Screener';
+  display: flex; /* Permet d'organiser les éléments textuels */
+  flex-direction: column; /* Empile le sous-titre, le titre et le bouton verticalement */
+  align-items: left; /* Centre verticalement le texte et l'image au milieu de l'écran */
+  padding: 0 15rem; /* Marge intérieure de 5rem sur les côtés */
+  color:#00FF00;
+  font-size: 3rem; /* Titre très grand (style affiche) */
+  line-height: 0.9; /* Réduit l'espace entre les lignes (interligne serré) */
+  margin-bottom: 1rem; /* Espace de 1rem uniquement en bas du titre */
   white-space: nowrap; /* Empêche le titre de revenir à la ligne (reste sur une seule ligne) */
 }
 
@@ -155,4 +169,12 @@ html, body {
 /* Optionnel : Changer aussi le curseur sur les éléments cliquables (boutons et liens) */
 a, button {
   cursor: url('/cyber_cursor.png'), pointer;
+}
+
+.tech-stack {
+  display: flex; /* Aligne les éléments horizontalement */
+  gap: 2rem; /* Espace de 2rem entre chaque élément de la liste */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'espace horizontal est insuffisant */
+  justify-content: center; /* Centre les éléments horizontalement dans leur conteneur */
+  margin-top: 2rem; /* Espace au-dessus de la section pour la séparer du contenu précédent */
 }

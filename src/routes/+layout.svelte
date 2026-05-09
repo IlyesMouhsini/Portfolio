@@ -16,7 +16,7 @@
       <a href="#">/ Experiences</a>
       <a href="#">/ Projets</a>
       <a href="#">/ Contacts</a>
-      <a href="#" style="color: #FF00FF;">/ SP</a>
+      <a href="#" style="color: #FF00FF; hover-color: white;">/ SP</a>
     </div>
   </nav>
 {@render children()}
