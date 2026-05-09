@@ -1,0 +1,147 @@
+/* --- 1. IMPORT DES POLICES --- */
+/* @font-face permet de charger une police personnalisée qui n'est pas sur l'ordinateur de l'utilisateur */
+@font-face {
+  font-family: 'Maratype'; /* Définit le nom que tu utiliseras plus bas dans le code */
+  src: url('/fonts/Maratype.woff2') format('woff2'), /* Chemin vers le fichier (format moderne et compressé) */
+       url('/fonts/Maratype.woff') format('woff'); /* Fichier de secours pour les navigateurs plus anciens */
+  font-weight: normal; /* Indique que ce fichier correspond au poids de texte standard (non gras) */
+  font-style: normal;  /* Indique que ce fichier correspond au style normal (non italique) */
+}
+
+@font-face {
+  font-family: 'Screener'; /* Même logique pour la deuxième police */
+  src: url('/fonts/ScreenerW01-Regular.woff2') format('woff2'),
+       url('/fonts/ScreenerW01-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --- 2. RESET BASIQUE --- */
+body {
+  margin: 0; /* Supprime les marges extérieures par défaut du navigateur */
+  padding: 0; /* Supprime les marges intérieures par défaut du navigateur */
+  background-color: #0e0e0e; /* Applique un fond noir très sombre (presque noir) */
+}
+
+/* --- 3. STYLE GLOBAL DE LA PAGE --- */
+.page-container {
+  min-height: 100vh; /* La page fera au minimum 100% de la hauteur de l'écran (Viewport Height) */
+  display: flex; /* Active le mode Flexbox pour aligner les éléments enfants */
+  flex-direction: column; /* Aligne les enfants (navbar et main) verticalement */
+  color: white; /* Texte blanc par défaut pour toute la page */
+  font-family: 'Screener', sans-serif; /* Utilise 'Screener', ou sans-serif si elle ne charge pas */
+  overflow: hidden; /* Empêche l'apparition de barres de défilement si le contenu dépasse légèrement */
+}
+
+/* --- 4. NAVBAR --- */
+.navbar {
+  display: flex; /* Aligne le logo et les liens horizontalement */
+  justify-content: space-between; /* Pousse le logo à gauche et les liens à droite */
+  align-items: center; /* Centre verticalement le logo et les liens sur la même ligne */
+  padding: 2rem 3rem; /* Ajoute de l'espace interne (haut/bas : 2rem, gauche/droite : 3rem) */
+
+  /* --- AJOUTS POUR LE STICKY --- */
+  position: sticky;   /* Fixe l'élément au scroll */
+  top: 0;            /* Le colle tout en haut */
+  z-index: 1000;      /* S'assure qu'il passe au-dessus du reste du contenu */
+  background-color: #0e0e0e; /* Important : ajoute un fond pour ne pas voir le texte passer dessous */
+}
+
+.logo {
+  height: 100px; /* Force la hauteur du logo à 100 pixels */
+  object-fit: contain; /* Garde les proportions de l'image sans l'écraser */
+}
+
+.nav-links {
+  display: flex; /* Aligne les liens de navigation les uns à côté des autres */
+  gap: 1.5rem; /* Crée un espace de 1.5rem entre chaque lien */
+  color: #00FF00; /* Couleur de texte vert fluo */
+  font-size: 1.125rem; /* Taille de police légèrement supérieure à la normale */
+  letter-spacing: 0.05em; /* Augmente très légèrement l'espace entre les lettres */
+}
+
+.nav-links a {
+  text-decoration: none; /* Supprime le soulignement par défaut des liens */
+  color: #00FF00; /* Applique le vert fluo aux liens */
+  transition: color 0.3s; /* Prépare une animation fluide de 0.3s pour le changement de couleur */
+  font-family: 'Screener', sans-serif; /* Utilise la police de caractères définie */
+}
+
+.nav-links a:hover {
+  color: white; /* Au survol de la souris, le lien devient blanc */
+}
+
+.sp-text {
+  color: #FF00FF; /* Couleur rose/magenta pour cet élément spécifique */
+  font-weight: bold; /* Met le texte en gras */
+  margin-left: 0.5rem; /* Ajoute un petit espace à gauche pour le décoller du texte précédent */
+}
+
+/* --- 5. CONTENU PRINCIPAL --- */
+.main-content {
+  flex-grow: 1; /* Prend tout l'espace vertical restant dans la page */
+  display: flex; /* Active Flexbox pour aligner texte (gauche) et image (droite) */
+  align-items: center; /* Centre verticalement le texte et l'image au milieu de l'écran */
+  justify-content: space-between; /* Espace le texte et l'image aux extrémités */
+  padding: 0 5rem; /* Marge intérieure de 5rem sur les côtés */
+  max-width: 1600px; /* Empêche le contenu de devenir trop large sur les très grands écrans */
+  margin: 0 auto; /* Centre horizontalement le bloc .main-content */
+  width: 100%; /* S'assure que le bloc prend toute la largeur disponible jusqu'à 1600px */
+  box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur totale pour éviter les débordements */
+}
+
+/* --- 6. TEXTES (GAUCHE) --- */
+.text-section {
+  display: flex; /* Permet d'organiser les éléments textuels */
+  flex-direction: column; /* Empile le sous-titre, le titre et le bouton verticalement */
+  gap: 1rem; /* Ajoute un espace de 1.5rem entre chaque élément pour éviter qu'ils ne collent */
+}
+
+.subtitle {
+  color: #00FF00; /* Vert fluo */
+  font-size: 1.25rem; /* Taille de police du sous-titre */
+  margin-bottom: 1rem; /* Espace sous le sous-titre pour ne pas coller le titre principal */
+  letter-spacing: 0.05em; /* Espacement des lettres */
+}
+
+.main-title {
+  font-family: 'Maratype', sans-serif; /* Applique la police spécifique définie au début */
+  color: white;
+  font-size: 150px; /* Titre très grand (style affiche) */
+  line-height: 0.9; /* Réduit l'espace entre les lignes (interligne serré) */
+  text-transform: uppercase; /* Transforme automatiquement tout le texte en majuscules */
+  margin: 0 0 2.5rem 0; /* Espace de 2.5rem uniquement en bas du titre */
+  white-space: nowrap; /* Empêche le titre de revenir à la ligne (reste sur une seule ligne) */
+}
+
+.discover-btn {
+  font-family: 'Screener', sans-serif; /* Utilise la deuxième police pour le bouton */
+  background: transparent; /* Fond transparent (on ne voit que la bordure) */
+  border: 2px solid #00FF00; /* Bordure de 2px de couleur vert fluo */
+  color: #00FF00; /* Texte vert fluo */
+  border-radius: 8px; /* Arrondit les coins du bouton */
+  padding: 0.75rem 2.5rem; /* Espace interne du bouton (haut/bas : 0.75, gauche/droite : 2.5) */
+  font-size: 1.25rem;
+  cursor: pointer; /* Change le curseur de souris en "main" au survol */
+  letter-spacing: 0.1em; /* Lettres bien espacées pour un look moderne */
+  transition: all 0.3s ease; /* Animation fluide pour tout changement (couleur, fond...) */
+  align-self: flex-start; /* Aligne le bouton à gauche (sinon il prendrait toute la largeur en flex) */
+}
+
+.discover-btn:hover {
+  background-color: #00FF00; /* Le fond devient vert fluo au survol */
+  color: #0e0e0e; /* Le texte devient noir au survol pour rester lisible */
+}
+
+/* --- 7. IMAGE (DROITE) --- */
+.image-section {
+  flex-shrink: 0; /* Empêche l'image de rétrécir si le texte prend trop de place */
+  height: 750px; /* Hauteur fixe pour le conteneur de l'image */
+}
+
+.profile-pic {
+  width: 700px; /* Largeur de l'image */
+  height: 700px; /* Hauteur de l'image */
+  object-fit: contain; /* S'assure que l'image entière est visible sans être rognée */
+  display: block; /* Supprime l'espace vide parasite sous l'image */
+}
