@@ -97,6 +97,29 @@ body {
   gap: 1rem; /* Ajoute un espace de 1.5rem entre chaque élément pour éviter qu'ils ne collent */
 }
 
+.info-text {
+  display: flex; /* Permet d'organiser les éléments textuels */
+  flex-direction: row; /* Empile les éléments textuels horizontalement */
+  gap: 0.5rem; /* Ajoute un espace de 2rem entre les éléments pour éviter qu'ils ne collent */
+}
+
+/* LA CORRECTION : On écrase les marges des textes à l'intérieur de info-text */
+.info-text > * {
+  margin: 0 !important;
+  line-height: 1; /* Aligne le texte parfaitement au centre de sa ligne */
+}
+
+.info-text-section {
+  display: flex; /* Permet d'organiser les éléments textuels */
+  flex-direction: column; /* Empile le sous-titre, le titre et le bouton verticalement */
+  margin: 0; /* Supprime les marges par défaut pour éviter les espaces indésirables */
+  gap: 1rem; /* C'est ici que tu gères l'espacement exact (0.5rem = serré) */
+}
+
+.info-text-section > * {
+  margin: 0 !important; 
+} /* Force tous les éléments enfants de .info-text-section à ne pas avoir de marges, même si d'autres styles essaient de les appliquer */
+
 .subtitle {
   font-family: 'Screener'; /* Même logique pour la deuxième police */
   color: #00FF00; /* Vert fluo */
@@ -120,7 +143,7 @@ body {
   display: flex; /* Permet d'organiser les éléments textuels */
   flex-direction: column; /* Empile le sous-titre, le titre et le bouton verticalement */
   align-items: left; /* Centre verticalement le texte et l'image au milieu de l'écran */
-  padding: 0 15rem; /* Marge intérieure de 5rem sur les côtés */
+  padding: 0 7rem; /* Marge intérieure de 5rem sur les côtés */
   color:#00FF00;
   font-size: 3rem; /* Titre très grand (style affiche) */
   line-height: 0.9; /* Réduit l'espace entre les lignes (interligne serré) */

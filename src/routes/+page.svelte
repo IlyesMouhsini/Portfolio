@@ -50,10 +50,22 @@
   <main class="main-content">
   {#if mounted}
 
-    <div class="text-section">
+    <div class="info-text-section">
+    <div class="info-text">
+        <p class="subtitle" style="color: white;">Prenom: </p>
+        <p class="subtitle" style="color: #FF00F5;">Ilyes</p>
+    </div>
+    <div class="info-text">
+        <p class="subtitle" style="color: white;">Nom: </p>
+        <p class="subtitle" style="color: #FF00F5;">Mouhsini</p>
+    </div>
+    <div class="info-text">
+        <p class="subtitle" style="color: white;">Formation: </p>
+        <p class="subtitle" style="color: #FF00F5;">BUT Informatique</p>
+    </div>
 
-        <p class="subtitle" style="color: white;">Je m'appelle Ilyes Mouhsini, je suis actuellement en 2ème année de BUT Informatique à l'IUT de Vélizy. Passionné par l'exploitation des données et le développement, je maîtrise la gestion de bases de données SQL et le scripting, notamment en Python et Java.
-Mon parcours est marqué par une solide base technique en modélisation de données. </p>
+    <p class="subtitle" style="color: white;">Actuellement en deuxième année de BUT Informatique à l'IUT de Vélizy, Ilyes Mouhsini se spécialise dans l'analyse décisionnelle et l'exploitation de données. Passionné par la Business Intelligence, il mobilise une solide base technique en modélisation et en gestion de bases de données SQL pour transformer la donnée brute en levier stratégique.</p>
+    <p class="subtitle" style="color: white;">Expert en scripting Python, il l’utilise pour automatiser les processus de traitement et d’analyse de données complexes. Il travaille actuellement sur un projet de scouting BI, visant à concevoir un outil d'aide à la décision pour identifier les futurs talents du football à l’horizon 2026. Son profil allie rigueur technique et capacité de synthèse, avec l'ambition de devenir un consultant capable de traduire les enjeux métiers en solutions analytiques performantes. </p>
     
     </div>
 
@@ -66,6 +78,7 @@ Mon parcours est marqué par une solide base technique en modélisation de donn�
       />
     </div>
 
+    
     <div class="text-section">
 
         <p class="subtitle" style="color: white;">Je m'appelle Ilyes Mouhsini, je suis actuellement en 2ème année de BUT Informatique à l'IUT de Vélizy. Passionné par l'exploitation des données et le développement, je maîtrise la gestion de bases de données SQL et le scripting, notamment en Python et Java.

@@ -1,6 +1,9 @@
 <script>
 	import '$lib/app.css';
 	import './layout.css';
+	import { onMount } from "svelte";
+  	import { sineOut } from "svelte/easing";
+  	import { fly } from "svelte/transition";
 	import favicon from '$lib/assets/favicon.svg';
 	import Navbar from '$lib/components/Navbar.svelte'; // On importe le composant
 
@@ -16,7 +19,7 @@
       <a href="#">/ Experiences</a>
       <a href="#">/ Projets</a>
       <a href="#">/ Contacts</a>
-      <a href="#" style="color: #FF00FF; hover-color: white;">/ SP</a>
+      <a href="#">/ SP</a>
     </div>
   </nav>
 {@render children()}
