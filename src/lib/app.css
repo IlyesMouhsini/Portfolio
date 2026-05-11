@@ -52,6 +52,12 @@ body {
   object-fit: contain; /* Garde les proportions de l'image sans l'écraser */
 }
 
+.cube-point {
+  width: 30px; /* Largeur du point */
+  height: 30px; /* Hauteur du point */
+  object-fit: contain; /* Garde les proportions de l'image sans l'écraser */
+}
+
 .nav-links {
   display: flex; /* Aligne les liens de navigation les uns à côté des autres */
   gap: 1.5rem; /* Crée un espace de 1.5rem entre chaque lien */
@@ -128,6 +134,20 @@ body {
   letter-spacing: 0.05em; /* Espacement des lettres */
 }
 
+.subtitle-big {
+  font-family: 'Screener'; /* Même logique pour la deuxième police */
+  color: #00FF00; /* Vert fluo */
+  font-size: 2rem; /* Taille de police du sous-titre */
+  margin-bottom: 0; /* Espace sous le sous-titre pour ne pas coller le titre principal */
+  margin: 0; /* Supprime les marges par défaut pour éviter les espaces indésirables */
+  letter-spacing: 0.05em; /* Espacement des lettres */
+  white-space: nowrap; /* Empêche le titre de revenir à la ligne (reste sur une seule ligne) */
+}
+
+.subtitle-big > * {
+  margin: 0 !important; /* Force tous les éléments enfants de .subtitle-big à ne pas avoir de marges, même si d'autres styles essaient de les appliquer */
+}
+
 .main-title {
   font-family: 'Maratype', sans-serif; /* Applique la police spécifique définie au début */
   color: white;
@@ -200,4 +220,32 @@ a, button {
   flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'espace horizontal est insuffisant */
   justify-content: center; /* Centre les éléments horizontalement dans leur conteneur */
   margin-top: 2rem; /* Espace au-dessus de la section pour la séparer du contenu précédent */
+}
+
+.skills-list ul {
+  list-style: none; /* Supprime les points ronds par défaut */
+  padding: 0; /* Supprime les marges intérieures par défaut */
+  margin: 0; /* Supprime les marges extérieures par défaut */
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  font-family: 'Screener', sans-serif;
+  color: white; /* Force le texte en blanc */
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+/* Création du carré vert personnalisé */
+.skill-item::before {
+  content: ""; /* Nécessaire pour afficher le pseudo-élément */
+  display: inline-block;
+  width: 8px;  /* Taille du carré */
+  height: 8px; /* Taille du carré */
+  background-color: #00FF00; /* Ta couleur vert fluo */
+  margin-right: 15px; /* Espace entre le carré et le texte */
+  flex-shrink: 0; /* Empêche le carré de se déformer */
 }

@@ -64,8 +64,8 @@
         <p class="subtitle" style="color: #FF00F5;">BUT Informatique</p>
     </div>
 
-    <p class="subtitle" style="color: white;">Actuellement en deuxième année de BUT Informatique à l'IUT de Vélizy, Ilyes Mouhsini se spécialise dans l'analyse décisionnelle et l'exploitation de données. Passionné par la Business Intelligence, il mobilise une solide base technique en modélisation et en gestion de bases de données SQL pour transformer la donnée brute en levier stratégique.</p>
-    <p class="subtitle" style="color: white;">Expert en scripting Python, il l’utilise pour automatiser les processus de traitement et d’analyse de données complexes. Il travaille actuellement sur un projet de scouting BI, visant à concevoir un outil d'aide à la décision pour identifier les futurs talents du football à l’horizon 2026. Son profil allie rigueur technique et capacité de synthèse, avec l'ambition de devenir un consultant capable de traduire les enjeux métiers en solutions analytiques performantes. </p>
+    <p class="subtitle" style="color: white;">Actuellement en deuxième année de <span style="color: #00FFFF;">BUT Informatique</span>  à l'IUT de Vélizy, Ilyes Mouhsini se spécialise dans <span style="color: #00FFFF;">l'analyse décisionnelle</span> et <span style="color: #00FFFF;">l'exploitation de données</span>. Passionné par la <span style="color: #FFFF00;">Business Intelligence</span>, il mobilise une solide base technique en <span style="color: #00FFFF;">modélisation </span> et en <span style="color: #00FFFF;">gestion de bases de données SQL</span> pour transformer la donnée brute en levier stratégique.</p>
+    <p class="subtitle" style="color: white;">Expert en <span style="color: #00FFFF;">scripting Python</span>, il l’utilise pour automatiser les processus de traitement et d’analyse de données complexes. Il travaille actuellement sur un projet de <span style="color: #FFFF00;">scouting BI</span>, visant à concevoir un <span style="color: #00FFFF;">outil d'aide à la décision</span> pour identifier les futurs talents du football à l’horizon 2026. Son profil allie <span style="color: #00FFFF;">rigueur technique</span> et <span style="color: #00FFFF;">capacité de synthèse</span>, avec l'ambition de devenir un <span style="color: #FFFF00;">consultant</span> capable de traduire les <span style="color: #00FFFF;">enjeux métiers</span> en <span style="color: #00FFFF;">solutions analytiques performantes</span>. </p>
     
     </div>
 
@@ -81,8 +81,16 @@
     
     <div class="text-section">
 
-        <p class="subtitle" style="color: white;">Je m'appelle Ilyes Mouhsini, je suis actuellement en 2ème année de BUT Informatique à l'IUT de Vélizy. Passionné par l'exploitation des données et le développement, je maîtrise la gestion de bases de données SQL et le scripting, notamment en Python et Java.
-Mon parcours est marqué par une solide base technique en modélisation de données. </p>
+        <p class="subtitle-big">/ Hard Skills</p>
+
+        <ul class="skills-list">
+            <li class="skill-item">SQL</li>
+            <li class="skill-item">Python</li>
+            <li class="skill-item">Power BI</li>
+            <li class="skill-item">Excel</li>
+        </ul>
+        
+        
     
     </div>
     {/if}
