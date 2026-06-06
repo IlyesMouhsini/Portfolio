@@ -18,7 +18,7 @@
   <main class="main-content">
     <div class="image-section-experiences">
         <img
-            in:fly={{ y: -50, duration: 1000, delay: 600, easing: quintOut }} 
+            in:fly={{ y: -50, duration: 1000, delay: 200, easing: quintOut }} 
             src="/setup_CEREMH.jpg" 
             alt="Setup CEREMH" 
             class="pic-presentation"
@@ -27,14 +27,14 @@
 
         <div class="info-text-section">
 
-        <p class="subtitle-big" in:fly={{ y: 20, duration: 800, delay: 700 }}>/ Developpeur Logiciel</p>
+        <p class="subtitle-big" in:fly={{ y: 20, duration: 800, delay: 400 }}>/ Developpeur Logiciel</p>
 
-    <p class="subtitle" style="color: white;" in:fly={{ x: -50, duration: 1000, delay: 500, easing: quintOut }}>
+    <p class="subtitle" style="color: white;" in:fly={{ x: -50, duration: 1000, delay: 400, easing: quintOut }}>
   Lors de son stage de fin de deuxième année en tant que <span style="color: #00FFFF;">Développeur Logiciel</span> au <span style="color: #FFFF00;">CEREMH</span>, Ilyes Mouhsini a piloté la modernisation et la refonte UI/UX de l'application médicale <span style="color: #00FFFF;">BeCape</span>. 
   Dans un environnement de pointe liant le code à la simulation physique (volants, pédaliers), il a conçu des architectures logicielles robustes en <span style="color: #00FFFF;">C++ et Qt</span> pour fluidifier l'analyse motrice en temps réel. 
 </p>
 
-<p class="subtitle" style="color: white;" in:fly={{ x: -50, duration: 1000, delay: 550, easing: quintOut }}>
+<p class="subtitle" style="color: white;" in:fly={{ x: -50, duration: 1000, delay: 350, easing: quintOut }}>
   Au-delà des aspects purement algorithmiques, il a apporté une forte sensibilité à l'<span style="color: #00FFFF;">expérience utilisateur (UI/UX)</span> et à l'accessibilité logicielle. 
   Il a notamment modernisé l'interface par l'intégration de thèmes dynamiques (Mode Sombre) pour le confort des praticiens, et restructuré les layouts XML pour un rendu responsive. Engagé pour l'inclusion, il a développé des fonctionnalités d'accessibilité destinées aux patients daltoniens (palettes adaptées et textures). Son profil a ainsi allié <span style="color: #00FFFF;">conception système</span>, gestion de <span style="color: #00FFFF;">bases de données SQL</span>.
 </p>
