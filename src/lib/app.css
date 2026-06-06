@@ -240,9 +240,9 @@ a, button {
 }
 
 /* Création du carré vert personnalisé */
-.skill-item::before {
+.skill-item::before { /* Pseudo-élément avant pour créer le carré vert */
   content: ""; /* Nécessaire pour afficher le pseudo-élément */
-  display: inline-block;
+  display: inline-block; /* Affiche le pseudo-élément comme un bloc en ligne (comme une image) */
   width: 8px;  /* Taille du carré */
   height: 8px; /* Taille du carré */
   background-color: #00FF00; /* Ta couleur vert fluo */
