@@ -39,12 +39,12 @@
   Il a notamment modernisé l'interface par l'intégration de thèmes dynamiques (Mode Sombre) pour le confort des praticiens, et restructuré les layouts XML pour un rendu responsive. Engagé pour l'inclusion, il a développé des fonctionnalités d'accessibilité destinées aux patients daltoniens (palettes adaptées et textures). Son profil a ainsi allié <span style="color: #00FFFF;">conception système</span>, gestion de <span style="color: #00FFFF;">bases de données SQL</span>.
 </p>
 
-    <p class="subtitle" style="color: white;" in:fly={{ x: -50, duration: 1000, delay: 600, easing: quintOut }}>souhaitez vous en apprendre d'avantage ?</p>
+    <p class="subtitle" style="color: white;" in:fly={{ y: 20, duration: 1000, delay: 600, easing: quintOut }}>souhaitez vous en apprendre d'avantage ?</p>
     <div class="align-items">
-    <button class="learn-more-btn" in:fly={{ y: 20, duration: 800, delay: 600 }} href="routes/stage_CEREMH">
+    <button class="learn-more-btn" in:fly={{ y: 20, duration: 800, delay: 700 }} href="routes/stage_CEREMH">
         oui
     </button>
-    <button class="cancel-btn" in:fly={{ y: 20, duration: 800, delay: 600 }} onclick={() => scrollToSection('projets')}>
+    <button class="cancel-btn" in:fly={{ y: 20, duration: 800, delay: 800 }} onclick={() => scrollToSection('projets')}>
         non
     </button>
     </div>
