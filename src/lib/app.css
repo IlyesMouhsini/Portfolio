@@ -46,7 +46,7 @@ body {
   z-index: 1000;      /* S'assure qu'il passe au-dessus du reste du contenu */
   background-color: #0e0e0e; /* Important : ajoute un fond pour ne pas voir le texte passer dessous */
   /*width : 100%; /* S'assure que la navbar prend toute la largeur de l'écran */
-  height: 80px; /* Hauteur fixe pour la navbar, tu peux ajuster selon tes besoins */
+  height: 60px; /* Hauteur fixe pour la navbar, tu peux ajuster selon tes besoins */
 }
 
 .logo {
@@ -193,10 +193,34 @@ body {
   color: #0e0e0e; /* Le texte devient noir au survol pour rester lisible */
 }
 
+.learn-more-btn {
+  font-family: 'Screener', sans-serif; /* Utilise la deuxième police pour le bouton */
+  background: transparent; /* Fond transparent (on ne voit que la bordure) */
+  border: 2px solid #00FF00; /* Bordure de 2px de couleur vert fluo */
+  color: #00FF00; /* Texte vert fluo */
+  border-radius: 8px; /* Arrondit les coins du bouton */
+  padding: 0.75rem 2.5rem; /* Espace interne du bouton (haut/bas : 0.75, gauche/droite : 2.5) */
+  font-size: 1rem;
+  cursor: pointer; /* Change le curseur de souris en "main" au survol */
+  letter-spacing: 0.1em; /* Lettres bien espacées pour un look moderne */
+  transition: all 0.3s ease; /* Animation fluide pour tout changement (couleur, fond...) */
+  align-self: flex-start; /* Aligne le bouton à gauche (sinon il prendrait toute la largeur en flex) */
+  cursor: url('/cyber_cursor_black.png'), pointer; /* Applique le curseur personnalisé sur le bouton */
+}
+
+.learn-more-btn:hover {
+  background-color: #00FF00; /* Le fond devient vert fluo au survol */
+  color: #0e0e0e; /* Le texte devient noir au survol pour rester lisible */
+}
 /* --- 7. IMAGE (DROITE) --- */
 .image-section {
   flex-shrink: 0; /* Empêche l'image de rétrécir si le texte prend trop de place */
   height: 750px; /* Hauteur fixe pour le conteneur de l'image */
+}
+
+.image-section-experiences {
+  flex-shrink: 0; /* Empêche l'image de rétrécir si le texte prend trop de place */
+  width: 60%; /* Largeur fixe pour le conteneur de l'image */
 }
 
 .profile-pic {
@@ -251,3 +275,18 @@ a, button {
   margin-right: 15px; /* Espace entre le carré et le texte */
   flex-shrink: 0; /* Empêche le carré de se déformer */
 }
+
+.pic-presentation {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    border: 2px solid #00FF00; /* Style Cyber */
+  }
+
+/* Style pour la vidéo de présentation */
+.video-presentation {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    border: 2px solid #00FF00; /* Style Cyber */
+  }

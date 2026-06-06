@@ -17,7 +17,7 @@
     <img src="/IM%20Logo.png" alt="Logo Ilyes" class="logo" />
     <div class="nav-links">
       <a onclick={() => scrollToSection('about')}>/ A propos</a>
-      <a href="#">/ Experiences</a>
+      <a onclick={() => scrollToSection('experiences')}>/ Experiences</a>
       <a href="#">/ Projets</a>
       <a href="#">/ Contacts</a>
       <a href="#">/ SP</a>

@@ -3,6 +3,7 @@
   import { sineOut, quintOut } from "svelte/easing";
   import { fly } from "svelte/transition";
   import { observeIntersection } from "$lib/observer";
+  import { scrollToSection } from '$lib/ScrollToSection';
   
   // Remplacement de "visible" par "mounted" avec le $state de Svelte 5
   let mounted = $state(false);
@@ -38,7 +39,7 @@
 </p>
 
 <p class="subtitle" style="color: white;" in:fly={{ x: -50, duration: 1000, delay: 550, easing: quintOut }}>
-  Tourné vers l'avenir du web, il développe une expertise affûtée en <span style="color: #00FFFF;">développement Full-Stack</span> et en <span style="color: #00FFFF;">intégration moderne</span>. 
+  Tourné vers l'avenir du web, il développe une expertise en <span style="color: #00FFFF;">développement Full-Stack</span> et en <span style="color: #00FFFF;">intégration moderne</span>. 
   Passionné par l'architecture logicielle/web, il met à profit sa maîtrise de frameworks comme <span style="color: #FFFF00;">SvelteKit</span> et de l'écosystème <span style="color: #00FFFF;">TypeScript</span> pour concevoir des applications web ultra-performantes, fluides et interactives. Son profil allie <span style="color: #00FFFF;">créativité</span> et sensibilité à l'<span style="color: #00FFFF;">expérience utilisateur (UI/UX)</span>, avec l'ambition de concevoir des architectures applicatives innovantes, esthétiques et parfaitement adaptées aux besoins métiers du marché.
 </p>
     
@@ -77,8 +78,11 @@
         </ul>
         
         
-    
+    <button class="learn-more-btn" in:fly={{ y: 20, duration: 800, delay: 600 }} onclick={() => scrollToSection('experiences')}>
+        En savoir plus
+      </button>
     </div>
+    
   </main>
   {/if}
 </div>
