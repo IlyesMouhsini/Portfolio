@@ -2,16 +2,14 @@
   import { onMount } from "svelte";
   import { sineOut, quintOut } from "svelte/easing";
   import { fly } from "svelte/transition";
+  import { observeIntersection } from "$lib/observer";
   
   // Remplacement de "visible" par "mounted" avec le $state de Svelte 5
   let mounted = $state(false);
 
-  onMount(() => {
-    mounted = true;
-  });
 </script>
 
-<div class="page-container">
+<div id="about" class="page-container" use:observeIntersection={() => mounted = true}>
 
 {#if mounted}
 

@@ -9,6 +9,13 @@
   onMount(() => {
     mounted = true;
   });
+
+  function scrollToAbout() {
+    const target = document.getElementById('about');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 </script>
 
 <main class="main-content">
@@ -24,7 +31,7 @@
         ILYES MOUHSINI
       </h1>
       
-      <button class="discover-btn" in:fly={{ y: 20, duration: 800, delay: 600 }}>
+      <button class="discover-btn" href="/about" in:fly={{ y: 20, duration: 800, delay: 600 }} onclick={scrollToAbout}>
         Découvrir
       </button>
     </div>
