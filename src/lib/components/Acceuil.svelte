@@ -2,6 +2,7 @@
   import { fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
   import { onMount } from 'svelte';
+  import { scrollToSection } from '$lib/ScrollToSection';
   
   // Le secret Svelte 5 est ici : $state()
   let mounted = $state(false);
@@ -10,12 +11,6 @@
     mounted = true;
   });
 
-  function scrollToAbout() {
-    const target = document.getElementById('about');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 </script>
 
 <main class="main-content">
@@ -31,7 +26,7 @@
         ILYES MOUHSINI
       </h1>
       
-      <button class="discover-btn" href="/about" in:fly={{ y: 20, duration: 800, delay: 600 }} onclick={scrollToAbout}>
+      <button class="discover-btn" in:fly={{ y: 20, duration: 800, delay: 600 }} onclick={() => scrollToSection('about')}>
         Découvrir
       </button>
     </div>
