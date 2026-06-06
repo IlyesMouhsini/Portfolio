@@ -1,12 +1,14 @@
 <script lang="ts">
-  //import SectionHeader from "./SectionHeader.svelte";
-  //import MeImage from "./MeImage.svelte";
   import { onMount } from "svelte";
-  import { sineOut } from "svelte/easing";
+  import { sineOut, quintOut } from "svelte/easing";
   import { fly } from "svelte/transition";
-  let techlist: HTMLElement | null = null;
-  let visible = false;
   
+  // Remplacement de "visible" par "mounted" avec le $state de Svelte 5
+  let mounted = $state(false);
+
+  onMount(() => {
+    mounted = true;
+  });
 </script>
 
 <div class="page-container">
@@ -39,7 +41,7 @@
 
     <div class="image-section">
       <img
-        in:fly={{ x: -50, duration: 1000, delay: 600, easing: quintOut }} 
+        in:fly={{ y: -50, duration: 1000, delay: 600, easing: quintOut }} 
         src="/Icon_photo_de moi_cyber_2.png" 
         alt="Portrait Ilyes vertical" 
         class="profile-pic"
