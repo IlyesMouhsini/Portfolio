@@ -27,17 +27,29 @@
 
         <div class="info-text-section">
 
+        <p class="subtitle-big" in:fly={{ y: 20, duration: 800, delay: 700 }}>/ Developpeur Logiciel</p>
+
     <p class="subtitle" style="color: white;" in:fly={{ x: -50, duration: 1000, delay: 500, easing: quintOut }}>
-  Actuellement en deuxième année de <span style="color: #00FFFF;">BUT Informatique</span> à l'IUT de Vélizy, Ilyes Mouhsini se spécialise dans <span style="color: #00FFFF;">l'analyse décisionnelle</span> et <span style="color: #00FFFF;">l'exploitation de données</span>. 
-  Passionné par la <span style="color: #FFFF00;">Business Intelligence</span>, il mobilise une solide base technique en <span style="color: #00FFFF;">modélisation </span> et en <span style="color: #00FFFF;">gestion de bases de données SQL</span> pour transformer la donnée brute en levier stratégique.
+  Lors de son stage de fin de deuxième année en tant que <span style="color: #00FFFF;">Développeur Logiciel</span> au <span style="color: #FFFF00;">CEREMH</span>, Ilyes Mouhsini a piloté la modernisation et la refonte UI/UX de l'application médicale <span style="color: #00FFFF;">BeCape</span>. 
+  Dans un environnement de pointe liant le code à la simulation physique (volants, pédaliers), il a conçu des architectures logicielles robustes en <span style="color: #00FFFF;">C++ et Qt</span> pour fluidifier l'analyse motrice en temps réel. 
 </p>
 
 <p class="subtitle" style="color: white;" in:fly={{ x: -50, duration: 1000, delay: 550, easing: quintOut }}>
-  Tourné vers l'avenir du web, il développe une expertise en <span style="color: #00FFFF;">développement Full-Stack</span> et en <span style="color: #00FFFF;">intégration moderne</span>. 
-  Passionné par l'architecture logicielle/web, il met à profit sa maîtrise de frameworks comme <span style="color: #FFFF00;">SvelteKit</span> et de l'écosystème <span style="color: #00FFFF;">TypeScript</span> pour concevoir des applications web ultra-performantes, fluides et interactives. Son profil allie <span style="color: #00FFFF;">créativité</span> et sensibilité à l'<span style="color: #00FFFF;">expérience utilisateur (UI/UX)</span>, avec l'ambition de concevoir des architectures applicatives innovantes, esthétiques et parfaitement adaptées aux besoins métiers du marché.
+  Au-delà des aspects purement algorithmiques, il a apporté une forte sensibilité à l'<span style="color: #00FFFF;">expérience utilisateur (UI/UX)</span> et à l'accessibilité logicielle. 
+  Il a notamment modernisé l'interface par l'intégration de thèmes dynamiques (Mode Sombre) pour le confort des praticiens, et restructuré les layouts XML pour un rendu responsive. Engagé pour l'inclusion, il a développé des fonctionnalités d'accessibilité destinées aux patients daltoniens (palettes adaptées et textures). Son profil a ainsi allié <span style="color: #00FFFF;">conception système</span>, gestion de <span style="color: #00FFFF;">bases de données SQL</span>.
 </p>
 
+    <p class="subtitle" style="color: white;" in:fly={{ x: -50, duration: 1000, delay: 600, easing: quintOut }}>souhaitez vous en apprendre d'avantage ?</p>
+    <div class="align-items">
+    <button class="learn-more-btn" in:fly={{ y: 20, duration: 800, delay: 600 }} href="routes/stage_CEREMH">
+        oui
+    </button>
+    <button class="cancel-btn" in:fly={{ y: 20, duration: 800, delay: 600 }} onclick={() => scrollToSection('projets')}>
+        non
+    </button>
+    </div>
 </div>
+
 
     
     

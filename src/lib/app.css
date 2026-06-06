@@ -98,6 +98,15 @@ body {
   box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur totale pour éviter les débordements */
 }
 
+.align-items {
+  flex-grow: 1; /* Prend tout l'espace vertical restant dans la page */
+  display: flex; /* Active Flexbox pour aligner texte (gauche) et image (droite) */
+  align-items: center; /* Centre verticalement le texte et l'image au milieu de l'écran */
+  /*justify-content: space-between; /* Espace le texte et l'image aux extrémités */
+  gap: 1rem; /* Ajoute un espace de 2rem entre les éléments pour éviter qu'ils ne collent */
+  box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur totale pour éviter les débordements */
+}
+
 /* --- 6. TEXTES (GAUCHE) --- */
 .text-section {
   display: flex; /* Permet d'organiser les éléments textuels */
@@ -210,6 +219,26 @@ body {
 
 .learn-more-btn:hover {
   background-color: #00FF00; /* Le fond devient vert fluo au survol */
+  color: #0e0e0e; /* Le texte devient noir au survol pour rester lisible */
+}
+
+.cancel-btn {
+  font-family: 'Screener', sans-serif; /* Utilise la deuxième police pour le bouton */
+  background: transparent; /* Fond transparent (on ne voit que la bordure) */
+  border: 2px solid #ff0000; /* Bordure de 2px de couleur rouge */
+  color: #ff0000; /* Texte rouge */
+  border-radius: 8px; /* Arrondit les coins du bouton */
+  padding: 0.75rem 2.5rem; /* Espace interne du bouton (haut/bas : 0.75, gauche/droite : 2.5) */
+  font-size: 1rem;
+  cursor: pointer; /* Change le curseur de souris en "main" au survol */
+  letter-spacing: 0.1em; /* Lettres bien espacées pour un look moderne */
+  transition: all 0.3s ease; /* Animation fluide pour tout changement (couleur, fond...) */
+  align-self: flex-start; /* Aligne le bouton à gauche (sinon il prendrait toute la largeur en flex) */
+  cursor: url('/cyber_cursor_black.png'), pointer; /* Applique le curseur personnalisé sur le bouton */
+}
+
+.cancel-btn:hover {
+  background-color: #ff0000; /* Le fond devient rouge au survol */
   color: #0e0e0e; /* Le texte devient noir au survol pour rester lisible */
 }
 /* --- 7. IMAGE (DROITE) --- */
