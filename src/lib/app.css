@@ -30,30 +30,45 @@ body {
   flex-direction: column; /* Aligne les enfants (navbar et main) verticalement */
   color: white; /* Texte blanc par défaut pour toute la page */
   font-family: 'Screener', sans-serif; /* Utilise 'Screener', ou sans-serif si elle ne charge pas */
-  overflow: hidden; /* Empêche l'apparition de barres de défilement si le contenu dépasse légèrement */
+  overflow-y: auto; 
+  overflow-x: hidden;
 }
 
-/* --- 4. NAVBAR --- */
+/* --- 4. NAVBAR CORRIGÉE --- */
 .navbar {
-  display: flex; /* Aligne le logo et les liens horizontalement */
-  justify-content: space-between; /* Pousse le logo à gauche et les liens à droite */
-  align-items: center; /* Centre verticalement le logo et les liens sur la même ligne */
-  padding: 2rem 3rem; /* Ajoute de l'espace interne (haut/bas : 2rem, gauche/droite : 3rem) */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1.5rem 3rem; /* Légèrement réduit pour être plus élégant au scroll */
+  
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
 
-  /* --- AJOUTS POUR LE STICKY --- */
-  position: sticky;   /* Fixe l'élément au scroll */
-  top: 0;            /* Le colle tout en haut */
-  z-index: 1000;      /* S'assure qu'il passe au-dessus du reste du contenu */
-  background-color: #0e0e0e; /* Important : ajoute un fond pour ne pas voir le texte passer dessous */
-  /*width : 100%; /* S'assure que la navbar prend toute la largeur de l'écran */
-  height: 60px; /* Hauteur fixe pour la navbar, tu peux ajuster selon tes besoins */
+  z-index: 1000;
+  
+  /* --- L'EFFET BLUR --- */
+  background-color: rgba(14, 14, 14, 0.75); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
+
+  /* --- L'ANIMATION FLUIDE --- */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  box-sizing: border-box;
+  
+  /* 🚨 LA CORRECTION PRINCIPALE : On retire height: 60px pour que la boîte englobe TOUT son contenu */
+}
+
+/* La classe magique qui fonctionne enfin car la boîte fait la vraie taille du contenu */
+.hidden-nav {
+  transform: translateY(-100%);
 }
 
 .logo {
-  height: 100px; /* Force la hauteur du logo à 100 pixels */
-  object-fit: contain; /* Garde les proportions de l'image sans l'écraser */
+  height: 60px; /* Ajusté à 60px pour une barre de navigation fine et moderne à la Brittany Chiang */
+  object-fit: contain; 
 }
-
 .cube-point {
   width: 30px; /* Largeur du point */
   height: 30px; /* Hauteur du point */
@@ -96,6 +111,11 @@ body {
   margin: 0 auto; /* Centre horizontalement le bloc .main-content */
   width: 100%; /* S'assure que le bloc prend toute la largeur disponible jusqu'à 1600px */
   box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur totale pour éviter les débordements */
+}
+
+/* Cette classe va donner de l'espace par rapport à la navbar flottante */
+.hero-content {
+  padding-top: 140px !important; /* Ajuster cette valeur pour plus ou moins d'espace */
 }
 
 .align-items {
@@ -172,14 +192,21 @@ body {
 .section-title {
   font-family: 'Screener';
   display: flex; /* Permet d'organiser les éléments textuels */
-  flex-direction: column; /* Empile le sous-titre, le titre et le bouton verticalement */
-  align-items: left; /* Centre verticalement le texte et l'image au milieu de l'écran */
+  align-items: center; /* Centre verticalement le texte et l'image au milieu de l'écran */
   padding: 0 7rem; /* Marge intérieure de 5rem sur les côtés */
   color:#00FF00;
   font-size: 3rem; /* Titre très grand (style affiche) */
   line-height: 0.9; /* Réduit l'espace entre les lignes (interligne serré) */
   margin-bottom: 1rem; /* Espace de 1rem uniquement en bas du titre */
   white-space: nowrap; /* Empêche le titre de revenir à la ligne (reste sur une seule ligne) */
+  gap: 1rem; /* Espace entre le texte et la ligne (si tu veux un peu d'espace) */
+}
+
+.section-title::after {
+  content: "";           /* Nécessaire pour afficher le pseudo-élément */
+  flex-grow: 1;          /* Dit à la ligne de s'étirer pour prendre tout l'espace restant à droite */
+  height: 2px;           /* Épaisseur de la ligne (1px comme sur le modèle pour faire fin et propre) */
+  background-color: rgba(0, 255, 0, 0.2); /* Vert fluo, mais transparent à 20% pour un effet discret et classe */
 }
 
 .discover-btn {

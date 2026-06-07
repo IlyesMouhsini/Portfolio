@@ -13,7 +13,7 @@
 
 </script>
 
-<main class="main-content">
+<main class="main-content hero-content">
   {#if mounted}
     <div class="text-section">
       <!-- Le sous-titre arrive du haut -->
