@@ -41,9 +41,14 @@
 
     <p class="subtitle" style="color: white;" in:fly={{ y: 20, duration: 1000, delay: 600, easing: quintOut }}>souhaitez vous en apprendre d'avantage ?</p>
     <div class="align-items">
-    <button class="learn-more-btn" in:fly={{ y: 20, duration: 800, delay: 700 }} href="routes/stage_CEREMH">
-        oui
-    </button>
+    <a 
+  class="learn-more-btn" 
+  in:fly={{ y: 20, duration: 800, delay: 700 }} 
+  href="/stage_CEREMH"
+  style="display: inline-block; text-decoration: none;"
+  >
+  oui
+</a>
     <button class="cancel-btn" in:fly={{ y: 20, duration: 800, delay: 800 }} onclick={() => scrollToSection('projets')}>
         non
     </button>

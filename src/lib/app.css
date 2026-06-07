@@ -133,6 +133,23 @@ body {
   flex-direction: column; /* Empile le sous-titre, le titre et le bouton verticalement */
   gap: 1rem; /* Ajoute un espace de 1.5rem entre chaque élément pour éviter qu'ils ne collent */
 }
+.page-title-section {
+  display: flex; /* Permet d'organiser les éléments textuels */
+  flex-direction: column; /* Empile le sous-titre, le titre et le bouton verticalement */
+  align-items: center; /* Centre verticalement le texte et l'image au milieu de l'écran */
+  gap: 1rem; /* Ajoute un espace de 1.5rem entre chaque élément pour éviter qu'ils ne collent */
+}
+
+/* Nouveau conteneur centré pour tes pages de présentation solo */
+.title-solo-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement le bloc page-title-section */
+  align-items: center;     /* Centre verticalement au milieu de l'écran */
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
 .info-text {
   display: flex; /* Permet d'organiser les éléments textuels */
