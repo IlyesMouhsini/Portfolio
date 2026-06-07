@@ -78,7 +78,7 @@
         </ul>
         
         
-    <button class="learn-more-btn" in:fly={{ y: 20, duration: 800, delay: 600 }} onclick={() => scrollToSection('experiences')}>
+    <button class="learn-more-btn" in:fly={{ y: 20, duration: 800, delay: 1600 }} onclick={() => scrollToSection('experiences')}>
         En savoir plus
       </button>
     </div>

@@ -196,6 +196,35 @@ body {
   margin: 0 !important; /* Force tous les éléments enfants de .subtitle-big à ne pas avoir de marges, même si d'autres styles essaient de les appliquer */
 }
 
+.description {
+  font-family: 'Screener'; /* Même logique pour la deuxième police */
+  color: white; /* Texte blanc */
+  font-size: 1.25rem; /* Taille de police du texte de description */
+  /*margin-bottom: 2rem; /* Espace sous la description pour séparer du contenu suivant */
+  /* max-width: 600px; /* Limite la largeur du texte pour une meilleure lisibilité sur les grands écrans */
+}
+
+
+.description-section {
+  display: flex; /* Permet d'organiser les éléments textuels */
+  flex-direction: column; /* Empile le sous-titre, le titre et le bouton verticalement */
+  margin-bottom: 2rem; /* Espace sous la description pour séparer du contenu suivant */
+  gap: 1rem; /* C'est ici que tu gères l'espacement exact (0.5rem = serré) */
+  margin-top: 2rem; /* Espace au-dessus de la description pour la séparer du bouton */
+}
+
+.description > * {
+  margin: 0 !important; /* Force tous les éléments enfants de .description-section à ne pas avoir de marges, même si d'autres styles essaient de les appliquer */
+  line-height: 1; /* Aligne le texte parfaitement au centre de sa ligne */
+}
+
+.description-section > * {
+  margin: 0 !important; /* Force tous les éléments enfants de .description-section à ne pas avoir de marges, même si d'autres styles essaient de les appliquer */
+  line-height: 1; /* Aligne le texte parfaitement au centre de sa ligne */
+}
+
+
+
 .main-title {
   font-family: 'Maratype', sans-serif; /* Applique la police spécifique définie au début */
   color: white;
