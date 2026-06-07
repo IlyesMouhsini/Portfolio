@@ -39,7 +39,7 @@
       class="discover-btn" 
       style="align-self: center;"
       in:fly={{ y: 20, duration: 800, delay: 600 }} 
-      onclick={() => scrollToSection('about')}>
+      onclick={() => scrollToSection('about_CEREMH')}>
         Explorer
       </button>
     
@@ -65,6 +65,9 @@
       </ul>
       <ul class="skills-list">
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1300 }}>Git</li>
+      </ul>
+      <ul class="skills-list">
+            <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1400 }}>SQL</li>
       </ul>
       </div>
     </div>

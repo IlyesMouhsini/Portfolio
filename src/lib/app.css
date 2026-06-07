@@ -325,6 +325,13 @@ body {
   width: 60%; /* Largeur fixe pour le conteneur de l'image */
 }
 
+.image-section-experiences-right {
+  flex-shrink: 0; /* Empêche l'image de rétrécir si le texte prend trop de place */
+  width: 60%; /* Largeur fixe pour le conteneur de l'image */
+  /*margin-left: 2rem; /* Pousse l'image vers la droite dans son conteneur flex */
+  padding-left: 2rem; /* Ajoute un padding à gauche pour créer un espace entre l'image et le texte */
+}
+
 .profile-pic {
   width: 700px; /* Largeur de l'image */
   height: 700px; /* Hauteur de l'image */
@@ -392,3 +399,12 @@ a, button {
     border-radius: 8px;
     border: 2px solid #00FF00; /* Style Cyber */
   }
+
+/* Variables de couleurs prcq ça fait chier de les retenir à chaque fois */
+:root {
+  --cyber-green: #00FF00;
+  --cyber-blue: #00FFFF;
+  --cyber-black: #0e0e0e;
+  --cyber-yellow: #FFFF00;
+
+}
