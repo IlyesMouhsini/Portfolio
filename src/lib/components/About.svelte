@@ -64,7 +64,7 @@
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 800 }}>Python</li>
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 850 }}>Java</li>
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 900 }}>C, C++</li>
-            <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 950 }}>Figma</li>
+            <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 950 }}>Suite Adobe</li>
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1000 }}>HTML</li>
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1050 }}>CSS</li>
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1100 }}>Javascript</li>

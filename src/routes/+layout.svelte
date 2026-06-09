@@ -18,7 +18,7 @@
     <div class="nav-links">
       <a onclick={() => scrollToSection('about')}>/ A propos</a>
       <a onclick={() => scrollToSection('experiences')}>/ Experiences</a>
-      <a href="#">/ Projets</a>
+      <a onclick={() => scrollToSection('projets')}>/ Projets</a>
       <a href="#">/ Contacts</a>
       <a href="#">/ SP</a>
     </div>

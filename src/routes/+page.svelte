@@ -3,6 +3,7 @@
   import Accueil from '$lib/components/Acceuil.svelte';
   import About from '$lib/components/About.svelte';
   import Experiences from '$lib/components/Experiences.svelte';
+	import Projets from '$lib/components/Projets.svelte';
 </script>
 <head>
   <title>Portfolio Ilyes Mouhsini</title>
@@ -11,3 +12,4 @@
 <Accueil />
 <About />
 <Experiences />
+<Projets />

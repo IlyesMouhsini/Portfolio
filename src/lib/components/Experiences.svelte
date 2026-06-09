@@ -3,6 +3,7 @@
   import { sineOut, quintOut } from "svelte/easing";
   import { fly } from "svelte/transition";
   import { observeIntersection } from "$lib/observer";
+  import { scrollToSection } from '$lib/ScrollToSection';
   
   // Remplacement de "visible" par "mounted" avec le $state de Svelte 5
   let mounted = $state(false);

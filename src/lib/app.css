@@ -400,6 +400,89 @@ a, button {
     border: 2px solid #00FF00; /* Style Cyber */
   }
 
+/* --- 8. SECTION PROJETS --- */
+
+/* Titre centré spécifiquement pour la page projets */
+.section-title-center {
+  font-family: 'Screener', sans-serif;
+  color: var(--cyber-green);
+  font-size: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/* Le conteneur Flexbox qui aligne les 3 cartes */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* Espace entre les cartes */
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur petit écran */
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Le design de la carte individuelle */
+.projet-card {
+  display: flex;
+  flex-direction: column; /* Empile le titre, texte et badges verticalement */
+  width: 350px; /* Largeur fixe pour avoir des cartes identiques */
+  min-height: 450px; /* Hauteur minimum */
+  border: 1px solid var(--cyber-green); /* Bordure fine verte */
+  border-radius: 12px; /* Coins arrondis comme sur ta maquette */
+  padding: 2.5rem 2rem;
+  background-color: transparent;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Petit effet sympa au survol de la carte (optionnel) */
+.projet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.1);
+}
+
+.projet-title {
+  font-family: 'Screener', sans-serif;
+  color: var(--cyber-green);
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.projet-desc {
+  font-family: 'Screener', sans-serif;
+  color: var(--cyber-green);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1; /* ASTUCE MAGIQUE : Pousse la zone des badges tout en bas de la carte */
+}
+
+/* Conteneur des badges de technologies */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap; /* Passe à la ligne s'il y a trop de badges */
+  gap: 1rem;
+  margin-top: 2rem; /* Sépare bien du texte */
+}
+
+/* Le design des petits boutons "pilules" */
+.badge {
+  font-family: 'Screener', sans-serif;
+  color: var(--cyber-green);
+  border: 1px solid var(--cyber-green);
+  border-radius: 50px; /* Crée la forme arrondie "pilule" */
+  padding: 0.4rem 1.5rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px; /* Largeur minimum pour que les badges soient uniformes */
+}
+
 /* Variables de couleurs prcq ça fait chier de les retenir à chaque fois */
 :root {
   --cyber-green: #00FF00;
