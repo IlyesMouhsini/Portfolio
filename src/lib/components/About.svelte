@@ -73,7 +73,7 @@
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1250 }}>Figma</li>
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1300 }}>Svelte</li>
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1350 }}>TypeScript</li>
-            <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1400 }}>Power BI</li>
+            <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1400 }}>Bash</li>
             
         </ul>
         

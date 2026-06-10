@@ -69,6 +69,12 @@
       <ul class="skills-list">
             <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1400 }}>SQL</li>
       </ul>
+      <ul class="skills-list">
+            <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1500 }}>HTML/CSS</li>
+      </ul>
+      <ul class="skills-list">
+            <li class="skill-item" in:fly={{ y: 20, duration: 800, delay: 1600 }}>IHM</li>
+      </ul>
       </div>
     </div>
     </div>

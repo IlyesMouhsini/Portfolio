@@ -3,6 +3,7 @@
   import Accueil_stage from '$lib/components/Accueil_stage.svelte';
   import About_CEREMH from '$lib/components/About_CEREMH.svelte';
 	import AboutBeCape from '$lib/components/About_BeCape.svelte';
+	import MissionsCEREMH from '$lib/components/Missions_CEREMH.svelte';
 //   import About from '$lib/components/About.svelte';
 //   import Experiences from '$lib/components/Experiences.svelte';
 </script>
@@ -13,3 +14,4 @@
 <Accueil_stage />
 <About_CEREMH />
 <AboutBeCape />
+<MissionsCEREMH />
