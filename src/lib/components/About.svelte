@@ -78,8 +78,16 @@
         </ul>
         
         
-    <button class="learn-more-btn" in:fly={{ y: 20, duration: 800, delay: 1600 }} onclick={() => scrollToSection('experiences')}>
-        En savoir plus
+        <a 
+  class="learn-more-btn" 
+  in:fly={{ y: 20, duration: 800, delay: 1600 }} 
+  href="/competences"
+  style="display: inline-block; text-decoration: none;"
+  >
+  En savoir plus
+</a>
+    <button class="cancel-btn" in:fly={{ y: 20, duration: 800, delay: 1700 }} onclick={() => scrollToSection('experiences')}>
+        Passer
       </button>
     </div>
     
