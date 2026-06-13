@@ -25,10 +25,16 @@
       <h1 class="main-title" in:fly={{ x: -50, duration: 1000, delay: 400, easing: quintOut }}>
         ILYES MOUHSINI
       </h1>
+
+      <div class="align-items">
       
       <button class="discover-btn" in:fly={{ y: 20, duration: 800, delay: 600 }} onclick={() => scrollToSection('about')}>
         Découvrir
       </button>
+      <button class="discover-btn" in:fly={{ y: 20, duration: 800, delay: 700 }} onclick={() => scrollToSection('contacts')}>
+        Contacter
+      </button>
+      </div>
     </div>
 
     <div class="image-section">

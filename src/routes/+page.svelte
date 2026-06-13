@@ -4,12 +4,14 @@
   import About from '$lib/components/About.svelte';
   import Experiences from '$lib/components/Experiences.svelte';
 	import Projets from '$lib/components/Projets.svelte';
+  import Contacts from '$lib/components/Contacts.svelte';
 </script>
-<head>
+<svelte:head>
   <title>Portfolio Ilyes Mouhsini</title>
-</head>
+</svelte:head>
 
 <Accueil />
 <About />
 <Experiences />
 <Projets />
+<Contacts />

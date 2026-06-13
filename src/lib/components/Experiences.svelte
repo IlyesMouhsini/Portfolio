@@ -18,12 +18,15 @@
 
   <main class="main-content">
     <div class="image-section-experiences">
-        <img
-            in:fly={{ y: -50, duration: 1000, delay: 200, easing: quintOut }} 
-            src="/setup_CEREMH.jpg" 
-            alt="Setup CEREMH" 
-            class="pic-presentation"
-        />
+        <video 
+        src="/videos/Video_Becape_Xp.mp4" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        class="video-presentation"
+        in:fly={{ y: -50, duration: 1000, delay: 200, easing: quintOut }}
+      >
         </div>
 
         <div class="info-text-section">

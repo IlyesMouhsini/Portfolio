@@ -47,7 +47,7 @@
     {
       titre: "Gestion d'entreprise",
       description: "Compétences en gestion d'entreprise, acquises en autodidacte lors de la création et du developpement de ma micro-entreprise (VD Studio).",
-      technos: ["Gestion de projet","Communication","Relation client","Négociation",]
+      technos: ["Gestion de projet","Communication","Relation client","Négociation","Autonomie","Créativité"]
     }
   ];
 
