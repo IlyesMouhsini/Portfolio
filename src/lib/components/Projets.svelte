@@ -1,70 +1,76 @@
 <script>
   import { fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
-  import { onMount } from 'svelte';
   import { observeIntersection } from "$lib/observer";
-  import { scrollToSection } from '$lib/ScrollToSection';
 
   let mounted = $state(false);
 
-  // tableau de données pour générer les cartes automatiquement
+  // 1. On ajoute la propriété "lien" UNIQUEMENT là où tu le souhaites
   const projets = [
     {
       titre: "Parc Info",
-      description: "Application web de gestion de parc (utilisateurs, machines, droits). En équipe de 5, en charge de la partie developpement web.",
-      technos: ["PHP", "Apache", "CSS", "MariaDB"]
+      description: "Application web de gestion de parc (utilisateurs, machines, droits). Projet universitaire en équipe de 5.",
+      technos: ["PHP", "Apache", "CSS", "MariaDB"],
+      lien: "/parc_info"  
     },
     {
       titre: "Cagnotte",
       description: "Application web d'une plateforme de gestion de cagnotte en ligne. Projet individuel.",
-      technos: ["HTML", "Python", "CSS"]
+      technos: ["HTML", "Python", "CSS"] 
+    
     },
     {
       titre: "VD Studio",
       description: "Plateforme web pour la micro-entreprise VD Studio. Site vitrine pour services numériques et audiovisuelles.",
       technos: ["HTML", "React", "CSS", "TypeScript"]
+   
     }
   ];
 </script>
 
-<div id="projets" class="page-container " use:observeIntersection={() => mounted = true}>
+<div id="projets" class="page-container" use:observeIntersection={() => mounted = true}>
   {#if mounted}
-    <p class="section-title" in:fly={{ x: -50, duration: 1000, delay: 100, easing: quintOut }}>/ Projets</p>
-
-    
-
-        <div class="page-title-section hero-content" in:fly={{ y: 50, duration: 800, delay: 200, easing: quintOut }}>
-    <p class="subtitle" style="color: white;" in:fly={{ y: 50, duration: 1000, delay: 200, easing: quintOut }}>
-          Voici une sélection de projets réalisés par Ilyes Mouhsini :
-        </p>
-    </div>  
-        
-    
-    <main class="main-content">
+<p class="section-title" in:fly={{ x: -50, duration: 1000, delay: 100, easing: quintOut }}>/ Projets</p>
 
 
-        
+<p class="section-subtitle hero-content info-text" style="display: flex; text-align: center; justify-content: center; font-size: 1.5rem;" in:fly={{ y: 50, duration: 1000, delay: 200, easing: quintOut }}>Voici quelques projets réalisés par Ilyes durant sa formation ainsi qu'en autodidacte.</p>
 
-    <!-- Conteneur des cartes -->
-    <main class="cards-container" in:fly={{ y: 50, duration: 800, delay: 400, easing: quintOut }}>
+
+    <main class="cards-container" style="margin-top : 2rem;" in:fly={{ y: 50, duration: 800, delay: 400, easing: quintOut }}>
       {#each projets as projet, index}
-        <!-- Chaque carte apparaît avec un léger décalage (delay) grâce à l'index -->
-        <article 
-          class="projet-card" 
-          in:fly={{ y: 50, duration: 800, delay: 300 + (index * 200), easing: quintOut }}
+        
+        {#if projet.lien}
+          <a 
+            href={projet.lien}
+            class="projet-card cliquable" 
+            in:fly={{ y: 50, duration: 800, delay: 300 + (index * 200), easing: quintOut }}
           >
-          <h3 class="projet-title">{projet.titre}</h3>
-          <p class="projet-desc">{projet.description}</p>
-          
-          <div class="tech-badges">
-            {#each projet.technos as tech}
-              <span class="badge">{tech}</span>
-            {/each}
-          </div>
-        </article>
+            <h3 class="projet-title">{projet.titre}</h3>
+            <p class="projet-desc">{projet.description}</p>
+            <div class="tech-badges">
+              {#each projet.technos as tech}
+                <span class="badge">{tech}</span>
+              {/each}
+            </div>
+          </a>
+        {:else}
+          <article 
+            class="projet-card" 
+            in:fly={{ y: 50, duration: 800, delay: 300 + (index * 200), easing: quintOut }}
+          >
+            <h3 class="projet-title">{projet.titre}</h3>
+            <p class="projet-desc">{projet.description}</p>
+            <div class="tech-badges">
+              {#each projet.technos as tech}
+                <span class="badge">{tech}</span>
+              {/each}
+            </div>
+          </article>
+        {/if}
+
       {/each}
-      
     </main>
-</main>
+
+    <p class="section-subtitle info-text" style="display: flex; text-align: center; justify-content: center; margin-top: 2rem;" in:fly={{ y: 50, duration: 1000, delay: 500, easing: quintOut }}>Cliquez sur une carte pour accéder à un projet.</p>
   {/if}
 </div>

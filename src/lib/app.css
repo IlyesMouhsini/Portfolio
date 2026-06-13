@@ -332,6 +332,15 @@ body {
   padding-left: 2rem; /* Ajoute un padding à gauche pour créer un espace entre l'image et le texte */
 }
 
+/* Style pour la vidéo de présentation */
+.video-presentation {
+  width: 100%;
+  max-width: 800px; /* S'adapte à 100% de sa boîte parent, par exemple dans tes sections */
+  border-radius: 8px;
+  border: 2px solid var(--cyber-green); /* Reste raccord avec tes variables CSS */
+  box-sizing: border-box;
+}
+
 .profile-pic {
   width: 700px; /* Largeur de l'image */
   height: 700px; /* Hauteur de l'image */
@@ -392,13 +401,6 @@ a, button {
     border: 2px solid #00FF00; /* Style Cyber */
   }
 
-/* Style pour la vidéo de présentation */
-.video-presentation {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 8px;
-    border: 2px solid #00FF00; /* Style Cyber */
-  }
 
 /* --- 8. SECTION PROJETS --- */
 
@@ -461,6 +463,17 @@ a, button {
   flex-grow: 1; /* ASTUCE MAGIQUE : Pousse la zone des badges tout en bas de la carte */
 }
 
+/* Styles spécifiques pour les cartes qui sont des liens */
+.projet-card.cliquable {
+  text-decoration: none; /* Supprime le soulignement HTML parasite sur le texte */
+}
+
+/* On force les textes à rester verts et blancs, même s'ils sont dans un lien */
+.projet-card.cliquable .projet-title,
+.projet-card.cliquable .projet-desc,
+.projet-card.cliquable .badge {
+  text-decoration: none;
+}
 /* Conteneur des badges de technologies */
 .tech-badges {
   display: flex;
