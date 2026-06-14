@@ -23,7 +23,8 @@
     {
       titre: "VD Studio",
       description: "Plateforme web pour la micro-entreprise VD Studio. Site vitrine pour services numériques et audiovisuelles.",
-      technos: ["HTML", "React", "CSS", "TypeScript"]
+      technos: ["HTML", "React", "CSS", "TypeScript"],
+      lien: "/vd_studio"
    
     }
   ];
