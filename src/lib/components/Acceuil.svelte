@@ -31,7 +31,7 @@
       <button class="discover-btn" in:fly={{ y: 20, duration: 800, delay: 600 }} onclick={() => scrollToSection('about')}>
         Découvrir
       </button>
-      <button class="discover-btn" in:fly={{ y: 20, duration: 800, delay: 700 }} onclick={() => scrollToSection('contacts')}>
+      <button class="blue-btn" in:fly={{ y: 20, duration: 800, delay: 700 }} onclick={() => scrollToSection('contacts')}>
         Contacter
       </button>
       </div>

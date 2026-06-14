@@ -16,7 +16,8 @@
     {
       titre: "Cagnotte",
       description: "Application web d'une plateforme de gestion de cagnotte en ligne. Projet individuel.",
-      technos: ["HTML", "Python", "CSS"] 
+      technos: ["HTML", "Python", "CSS","SQL"],
+      lien: "/cagnotte"
     
     },
     {

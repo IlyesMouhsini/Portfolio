@@ -19,7 +19,7 @@
   <a 
   class="cancel-btn" 
   in:fly={{ y: 20, duration: 800, delay: 700 }} 
-  href="/"
+  href="/#expériences"
   style="display: inline-block; text-decoration: none;"
   >
   Retour

@@ -12,7 +12,7 @@
     {
       titre: "WEB",
       description: "Competences en développement web, aquises durant ma formation ainsi qu'en autodidacte.",
-      technos: ["HTML", "CSS", "PHP","JavaScript","TypeScript"  , "Svelte"]
+      technos: ["HTML", "CSS", "PHP","JavaScript","TypeScript"  , "Svelte","Flask","Tailwind CSS"]
     },
     {
       titre: "BDD & Data",
@@ -22,7 +22,7 @@
     {
       titre: "Programmation",
       description: "Compétences en programmation, acquises durant ma formation, mon stage ainsi qu'en autodidacte.",
-      technos: ["C++", "C", "Qt","Java", "Python", "R"]
+      technos: ["C++", "C", "Qt","Java", "Python", "R","Kotlin","API"]
     },
     {
       titre: "Outils & Logiciels",
@@ -103,7 +103,7 @@
     <a 
   class="cancel-btn" 
   in:fly={{ y: 20, duration: 800, delay: 700 }} 
-  href="/"
+  href="/#about"
   style="display: inline-block; text-decoration: none;"
   >
   Retour
