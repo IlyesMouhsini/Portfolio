@@ -14,7 +14,7 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
   <nav class="navbar">
-    <img src="/IM%20Logo.png" alt="Logo Ilyes" class="logo" />
+    <a href="/"><img src="/IM%20Logo.png" alt="Logo Ilyes" class="logo" /></a>
     <div class="nav-links">
       <a onclick={() => scrollToSection('about')}>/ A propos</a>
       <a onclick={() => scrollToSection('experiences')}>/ Experiences</a>

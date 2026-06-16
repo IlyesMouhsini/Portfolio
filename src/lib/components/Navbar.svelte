@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  let navItems = ['A propos', 'Experiences', 'Projets', 'Contacts', 'SP'];
+  let navItems = ['A propos', 'Experiences', 'Projets', 'Contacts'];
   // Variables réactives pour gérer le scroll (Svelte 5)
   let hidden = $state(false);
   let lastScrollY = 0; // Pas besoin de $state ici, c'est une valeur technique interne
@@ -36,7 +36,7 @@
 
 <nav class="navbar {hidden ? 'hidden-nav' : ''}">
   
-  <img src="/IM%20Logo.png" alt="Logo" class="logo" />
+  <a href="/"><img src="/IM%20Logo.png" alt="Logo" class="logo" /></a>
 
   <div class="nav-links">
     
