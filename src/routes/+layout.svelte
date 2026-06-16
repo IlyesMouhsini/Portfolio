@@ -20,7 +20,6 @@
       <a onclick={() => scrollToSection('experiences')}>/ Experiences</a>
       <a onclick={() => scrollToSection('projets')}>/ Projets</a>
       <a onclick={() => scrollToSection('contacts')}>/ Contacts</a>
-      <a href="#">/ SP</a>
     </div>
   </nav>
 {@render children()}
