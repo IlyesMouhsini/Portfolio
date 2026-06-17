@@ -45,7 +45,7 @@
         
 
  <!-- Conteneur des cartes -->
-    <main class="cards-container hero-content" in:fly={{ y: 50, duration: 800, delay: 400, easing: quintOut }}>
+    <main class="cards-container hero-content" style="margin-bottom: 4rem;" in:fly={{ y: 50, duration: 800, delay: 400, easing: quintOut }}>
       {#each projets as projet, index}
         <!-- Chaque carte apparaît avec un léger décalage (delay) grâce à l'index -->
         <article 

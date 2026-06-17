@@ -47,9 +47,8 @@
 <a 
   class="learn-more-btn" 
   in:fly={{ y: 20, duration: 800, delay: 1200 }} 
-  href="#"
-  style="display: inline-block; text-decoration: none;"
-  >
+  href="/cv/CV_Ilyes_Mouhsini_ATS_2026_2027.pdf" target="_blank" rel="noreferrer" style="display: inline-block; text-decoration: none;"
+>
   CV
 </a>
     </div>
