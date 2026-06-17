@@ -24,14 +24,14 @@ body {
 }
 
 /* --- 3. STYLE GLOBAL DE LA PAGE --- */
+/* --- 3. STYLE GLOBAL DE LA PAGE --- */
 .page-container {
-  min-height: 100vh; /* La page fera au minimum 100% de la hauteur de l'écran (Viewport Height) */
-  display: flex; /* Active le mode Flexbox pour aligner les éléments enfants */
-  flex-direction: column; /* Aligne les enfants (navbar et main) verticalement */
-  color: white; /* Texte blanc par défaut pour toute la page */
-  font-family: 'Screener', sans-serif; /* Utilise 'Screener', ou sans-serif si elle ne charge pas */
-  overflow-y: auto; 
-  overflow-x: hidden;
+  min-height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  color: white; 
+  font-family: 'Screener', sans-serif; 
+  /* 🛠️ ON SUPPRIME LES DEUX LIGNES D'OVERFLOW ICI */
 }
 
 /* --- 4. NAVBAR CORRIGÉE --- */
@@ -39,25 +39,28 @@ body {
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
-  padding: 1.5rem 3rem; /* Légèrement réduit pour être plus élégant au scroll */
+  padding: 1.5rem 3rem;
   
   position: fixed; 
   top: 0;
   left: 0;
   width: 100%; 
-
   z-index: 1000;
   
-  /* --- L'EFFET BLUR --- */
-  background-color: rgba(14, 14, 14, 0.75); 
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px); 
+  /* LE CORRECTIF DU BLUR EST ICI */
+  background: rgba(14, 14, 14, 0.5) !important; /* Plus transparent pour voir le texte passer au travers */
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  
+  /* Hack pour forcer le rendu du flou par la carte graphique */
+  transform: translateZ(0); 
+  -webkit-transform: translateZ(0);
 
-  /* --- L'ANIMATION FLUIDE --- */
+  /* Petit bonus optionnel : une ligne très fine en bas pour délimiter la navbar */
+  /*border-bottom: 1px solid rgba(0, 255, 0, 0.1);*/
+
   transition: transform 0.3s ease-in-out, background-color 0.3s ease;
   box-sizing: border-box;
-  
-  /* 🚨 LA CORRECTION PRINCIPALE : On retire height: 60px pour que la boîte englobe TOUT son contenu */
 }
 
 /* La classe magique qui fonctionne enfin car la boîte fait la vraie taille du contenu */
