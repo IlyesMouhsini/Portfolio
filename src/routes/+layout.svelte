@@ -1,25 +1,19 @@
 <script>
-	import '$lib/app.css';
-	import './layout.css';
-	import { onMount } from "svelte";
-  	import { sineOut } from "svelte/easing";
-  	import { fly } from "svelte/transition";
-	import favicon from '$lib/assets/favicon.svg';
-	import Navbar from '$lib/components/Navbar.svelte'; // On importe le composant
-  import {scrollToSection} from '$lib/ScrollToSection';
+  import '$lib/app.css';
+  // 🚨 ASTUCE : J'ai désactivé layout.css. S'il te manque des styles, réactive-le, 
+  // mais assure-toi qu'il ne modifie PAS la couleur de la navbar !
+  // import './layout.css'; 
 
-	let { children } = $props();
+  import favicon from '$lib/assets/favicon.svg';
+  import Navbar from '$lib/components/Navbar.svelte'; // On importe le composant
+
+  let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+  <link rel="icon" href={favicon} />
+</svelte:head>
 
-  <nav class="navbar">
-    <a href="/"><img src="/IM%20Logo.png" alt="Logo Ilyes" class="logo" /></a>
-    <div class="nav-links">
-      <a onclick={() => scrollToSection('about')}>/ A propos</a>
-      <a onclick={() => scrollToSection('experiences')}>/ Experiences</a>
-      <a onclick={() => scrollToSection('projets')}>/ Projets</a>
-      <a onclick={() => scrollToSection('contacts')}>/ Contacts</a>
-    </div>
-  </nav>
+<Navbar />
+
 {@render children()}
